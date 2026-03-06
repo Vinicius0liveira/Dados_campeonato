@@ -1,216 +1,85 @@
-# 📊 Análise de Dados do Campeonato Brasileiro
+# 📊 Análise Exploratória de Dados – Campeonato Brasileiro
 
 ## 📌 Descrição do Projeto
 
-Este projeto tem como objetivo realizar uma **análise exploratória inicial de dados (EDA)** utilizando Python a partir de um dataset contendo informações sobre partidas do **Campeonato Brasileiro**.
+Este projeto tem como objetivo realizar uma **análise exploratória inicial de dados (EDA)** utilizando Python a partir de um conjunto de dados contendo informações sobre partidas do **Campeonato Brasileiro**.
 
-O script realiza operações básicas de **leitura, inspeção e exploração de dados**, permitindo compreender a estrutura do dataset e preparar as informações para futuras análises e visualizações.
+O programa realiza a **leitura, inspeção e exploração básica dos dados**, permitindo compreender a estrutura do dataset, identificar colunas relevantes e preparar os dados para futuras análises e visualizações.
 
-Além disso, o projeto foi estruturado pensando em **expansão futura para ferramentas de Business Intelligence**, como **Power BI**, permitindo a criação de dashboards e relatórios interativos.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-* **Python 3**
-* **Pandas** → Manipulação e análise de dados
-* **NumPy** → Operações numéricas
-* **Matplotlib** → Visualização de dados
-* **CSV Dataset** → Base de dados do campeonato brasileiro
-
-Bibliotecas utilizadas no código:
-
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-```
+O projeto também foi pensado para **integração futura com ferramentas de Business Intelligence**, como o **Power BI**, possibilitando a criação de dashboards interativos e análises mais avançadas.
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🎯 Objetivos do Programa
 
-```
-Dados_Campeonato/
-│
-├── DadosCampeonato.py
-├── campeonato_brasileiro_full.csv
-└── README.md
-```
+O programa foi está sendo desenvolvido para:
+
+* Carregar um conjunto de dados em formato CSV contendo informações sobre partidas do Campeonato Brasileiro.
+* Realizar uma **visualização inicial dos dados** para compreender sua estrutura.
+* Selecionar e exibir colunas específicas do dataset.
+* Acessar registros individuais dentro do conjunto de dados.
+* Exibir informações estruturais do dataset, como tipos de dados e presença de valores nulos.
+* Verificar o tamanho do dataset em número de linhas e colunas.
+* Apresentar o conteúdo completo do DataFrame para inspeção.
+
+Essas operações são fundamentais em projetos de **análise de dados**, pois permitem compreender a qualidade e a organização das informações antes de realizar análises mais complexas.
 
 ---
 
-## 📥 Fonte dos Dados
+## 📂 Estrutura dos Dados
 
-O dataset utilizado contém informações sobre jogos do **Campeonato Brasileiro**, incluindo:
+O dataset utilizado contém informações relacionadas às partidas do Campeonato Brasileiro, podendo incluir dados como:
 
-* Time mandante
-* Time visitante
-* Resultados
-* Informações das partidas
+* Times mandantes
+* Times visitantes
+* Resultados das partidas
+* Informações de rodada ou temporada
 * Estatísticas relacionadas aos jogos
 
-Arquivo utilizado:
-
-```
-campeonato_brasileiro_full.csv
-```
+Essas informações permitem realizar diversas análises sobre desempenho de equipes, frequência de partidas e comportamento dos resultados ao longo das temporadas.
 
 ---
 
-## ⚙️ Funcionalidades do Script
+## 📊 Possíveis Análises Futuras
 
-O script realiza as seguintes operações:
+A partir da exploração inicial realizada pelo programa, o projeto pode evoluir para análises mais aprofundadas, como:
 
-### 📖 1. Leitura do Dataset
+* Desempenho dos times como mandante e visitante
+* Número de vitórias, derrotas e empates por equipe
+* Média de gols por partida ou por rodada
+* Comparação de desempenho entre temporadas
+* Identificação de padrões estatísticos no campeonato
 
-```python
-Dados = pd.read_csv('c:/Users/olive/Desktop/Dados_Campeonato/campeonato_brasileiro_full.csv', sep=',')
-```
-
-Carrega o dataset em um **DataFrame do Pandas**.
-
----
-
-### 🔎 2. Visualização inicial dos dados
-
-```python
-print(Dados.head())
-```
-
-Exibe as **primeiras linhas do dataset** para entender sua estrutura.
+Também é possível criar **visualizações gráficas** para facilitar a interpretação dos dados.
 
 ---
 
-### 🏟️ 3. Seleção de Colunas
+## 📈 Integração com Ferramentas de BI
 
-```python
-print(Dados['mandante'])
-```
+Uma das propostas futuras deste projeto é integrar os dados tratados em Python com ferramentas de **Business Intelligence**, como o **Power BI**.
 
-Seleciona e exibe a coluna **mandante**, contendo os times que jogaram como mandantes.
+Com essa integração será possível desenvolver:
 
----
+* Dashboards interativos
+* Análises comparativas entre equipes
+* Visualização de estatísticas do campeonato
+* Indicadores de desempenho esportivo
+* Relatórios dinâmicos para exploração dos dados
 
-### 📊 4. Acesso a linhas específicas
-
-```python
-Dados.iloc[1]
-```
-
-Permite acessar uma linha específica do dataset.
+Python pode ser utilizado para **limpeza, preparação e organização dos dados**, enquanto o Power BI pode ser utilizado para **visualização e análise estratégica das informações**.
 
 ---
 
-### 🧾 5. Informações estruturais do DataFrame
+## 🚀 Possíveis Expansões do Projeto
 
-```python
-Dados.info()
-```
+O projeto pode evoluir para incluir:
 
-Exibe:
-
-* número de colunas
-* tipos de dados
-* valores nulos
-* estrutura geral do dataset
-
----
-
-### 📐 6. Dimensão do Dataset
-
-```python
-Dados.shape
-```
-
-Mostra:
-
-* número de **linhas**
-* número de **colunas**
-
----
-
-### 📄 7. Exibição completa dos dados
-
-```python
-print(Dados)
-```
-
-Mostra todo o DataFrame carregado.
-
----
-
-## 📊 Possíveis Expansões do Projeto
-
-Este projeto pode evoluir para análises mais avançadas, como:
-
-* 📈 Número de vitórias por time
-* 🏆 Times com melhor desempenho como mandante
-* ⚽ Média de gols por rodada
-* 📅 Evolução de desempenho ao longo das temporadas
-* 📊 Visualizações gráficas com **Matplotlib ou Seaborn**
-
-Exemplo de gráfico futuro:
-
-```python
-Dados['mandante'].value_counts().plot(kind='bar')
-plt.show()
-```
-
----
-
-## 📊 Integração com Power BI
-
-O dataset pode ser utilizado em ferramentas de **Business Intelligence**, como o **Power BI**, para criar dashboards interativos.
-
-Possibilidades de análise no Power BI:
-
-* Ranking de times
-* Performance por temporada
-* Comparação mandante vs visitante
-* Distribuição de resultados
-* Estatísticas de partidas
-
-Fluxo possível de integração:
-
-```
-Dataset CSV
-      ↓
-Python (limpeza e tratamento)
-      ↓
-Exportação para CSV ou Banco de Dados
-      ↓
-Power BI
-      ↓
-Dashboard interativo
-```
-
----
-
-## 🚀 Como Executar o Projeto
-
-1️⃣ Instale as bibliotecas necessárias
-
-```bash
-pip install pandas numpy matplotlib
-```
-
-2️⃣ Execute o script
-
-```bash
-python DadosCampeonato.py
-```
-
----
-
-## 🎯 Objetivo do Projeto
-
-Este projeto faz parte de um processo de aprendizado em:
-
-* **Análise de Dados**
-* **Manipulação de dados com Python**
-* **Exploração de datasets esportivos**
-* **Preparação de dados para ferramentas de BI**
+* Tratamento e limpeza de dados
+* Análises estatísticas mais avançadas
+* Criação de gráficos e visualizações
+* Automação de relatórios
+* Integração com bancos de dados
+* Construção de dashboards em Power BI
 
 ---
 
@@ -218,8 +87,4 @@ Este projeto faz parte de um processo de aprendizado em:
 
 **Vinícius Oliveira .-. **
 
-* GitHub: https://github.com/Vinicius0liveira
-
----
-
-⭐ Projeto desenvolvido para estudo de **Data Analysis com Python** e futura integração com **Power BI e ferramentas de Business Intelligence**.
+Projeto desenvolvido com foco em **aprendizado de análise de dados com Python**, exploração de datasets esportivos e aplicação futura em ferramentas de **Business Intelligence e Data Visualization**.
